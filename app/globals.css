@@ -1,0 +1,206 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Sassy Aesthetician Color Palette */
+  --background: oklch(0.95 0.02 300); /* soft lavender white */
+  --foreground: oklch(0.25 0.02 280); /* dark charcoal with slight purple */
+  --card: oklch(0.98 0.015 320); /* soft pink white */
+  --card-foreground: oklch(0.25 0.02 280);
+  --popover: oklch(0.98 0.015 320);
+  --popover-foreground: oklch(0.25 0.02 280);
+  --primary: oklch(0.75 0.15 320); /* baby pink */
+  --primary-foreground: oklch(0.98 0.01 320);
+  --secondary: oklch(0.85 0.1 180); /* mint green */
+  --secondary-foreground: oklch(0.25 0.02 180);
+  --muted: oklch(0.92 0.03 280); /* soft lavender */
+  --muted-foreground: oklch(0.45 0.03 280);
+  --accent: oklch(0.7 0.12 160); /* teal accent */
+  --accent-foreground: oklch(0.98 0.01 160);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.05 320);
+  --input: oklch(0.92 0.03 320);
+  --ring: oklch(0.75 0.15 320);
+  --chart-1: oklch(0.75 0.15 320);
+  --chart-2: oklch(0.85 0.1 180);
+  --chart-3: oklch(0.8 0.12 280);
+  --chart-4: oklch(0.7 0.12 160);
+  --chart-5: oklch(0.85 0.08 60);
+  --radius: 1.5rem;
+  
+  /* Custom Sassy Colors */
+  --sassy-pink: oklch(0.82 0.12 330);
+  --sassy-lavender: oklch(0.8 0.1 290);
+  --sassy-mint: oklch(0.85 0.1 160);
+  --sassy-cyan: oklch(0.8 0.1 200);
+  --sassy-green: oklch(0.7 0.15 145);
+  --sassy-charcoal: oklch(0.3 0.02 280);
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Custom Sassy Colors */
+  --color-sassy-pink: var(--sassy-pink);
+  --color-sassy-lavender: var(--sassy-lavender);
+  --color-sassy-mint: var(--sassy-mint);
+  --color-sassy-cyan: var(--sassy-cyan);
+  --color-sassy-green: var(--sassy-green);
+  --color-sassy-charcoal: var(--sassy-charcoal);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Holographic gradient animation */
+@keyframes holographic {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-2deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-holographic {
+  background-size: 400% 400%;
+  animation: holographic 15s ease infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Holographic background gradient */
+.bg-holographic {
+  background: linear-gradient(
+    135deg,
+    oklch(0.9 0.08 330) 0%,
+    oklch(0.88 0.08 290) 25%,
+    oklch(0.9 0.06 200) 50%,
+    oklch(0.88 0.08 160) 75%,
+    oklch(0.9 0.08 330) 100%
+  );
+}
+
+/* Wavy divider styles */
+.wavy-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Soft shadow for cards */
+.soft-shadow {
+  box-shadow: 0 8px 32px rgba(232, 180, 248, 0.2), 0 4px 16px rgba(180, 232, 220, 0.15);
+}
+
+/* Glow effect for buttons */
+.glow-pink {
+  box-shadow: 0 0 20px rgba(232, 180, 248, 0.5), 0 0 40px rgba(232, 180, 248, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(100, 220, 180, 0.5), 0 0 40px rgba(100, 220, 180, 0.3);
+}
+
+/* Chibi character hover wiggle — applied to wrapper so it doesn't conflict with float/bounce animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-4deg) scale(1.05); }
+  40% { transform: rotate(3deg) scale(1.08); }
+  60% { transform: rotate(-2deg) scale(1.06); }
+  80% { transform: rotate(1deg) scale(1.05); }
+}
+
+.chibi-hover:hover > img,
+.chibi-hover:hover > * > img {
+  animation: wiggle 0.6s ease-in-out;
+}
