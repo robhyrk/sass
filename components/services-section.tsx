@@ -13,13 +13,13 @@ const services = [
   {
     icon: Sparkles,
     title: "Skin Treatments",
-    description: "Facials, peels, and glow treatments I custom-mix for your skin. You'll leave looking like you have a filter on IRL.",
+    description: "Facials, peels, and glow treatments I custom-mix for your skin. You will leave looking like you have a filter on IRL.",
     gradient: "from-sassy-lavender/40 to-sassy-cyan/40",
   },
   {
     icon: Target,
     title: "Microneedling",
-    description: "Tiny needles, major payoff. I'll boost your collagen, smooth your texture, and have your skin looking stupid good.",
+    description: "Tiny needles, major payoff. I will boost your collagen, smooth your texture, and have your skin looking stupid good.",
     gradient: "from-sassy-cyan/40 to-sassy-mint/40",
   },
 ]

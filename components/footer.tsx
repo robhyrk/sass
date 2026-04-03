@@ -2,12 +2,12 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Facebook, Mail } from "lucide-react"
+import { Instagram, Mail, MapPin } from "lucide-react"
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Mail, href: "mailto:hello@sassyaesthetician.com", label: "Email" },
+  { icon: Instagram, href: "https://www.instagram.com/sassyaesthetician", label: "Instagram" },
+  { icon: MapPin, href: "https://maps.app.goo.gl/HgubqyFtrVTHAcbf9", label: "Google Maps" },
+  { icon: Mail, href: "mailto:hi@thesassyaesthetician.com", label: "Email" },
 ]
 
 const footerLinks = [

@@ -20,14 +20,14 @@ export function BookingSection() {
           OK But When Are You Booking?
         </h2>
         <p className="font-body text-lg md:text-xl text-sassy-charcoal/80 max-w-2xl mx-auto mb-10 text-balance">
-          Your skin is literally begging. Book directly in my calendar or slide into my DMs — either way, I&apos;m making you look unreal.
+          Your skin is literally begging. Book directly in my calendar or slide into my DMs — either way, I am making you look unreal.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           {/* Primary CTA */}
           <a
-            href="#"
+            href="mailto:hi@thesassyaesthetician.com"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-lg text-white bg-gradient-to-r from-sassy-charcoal to-sassy-charcoal/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Calendar className="w-5 h-5" />
@@ -36,7 +36,9 @@ export function BookingSection() {
 
           {/* Secondary CTA */}
           <a
-            href="#"
+            href="https://www.instagram.com/sassyaesthetician"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full font-display font-bold text-lg text-sassy-charcoal bg-white/80 backdrop-blur-sm border-2 border-sassy-pink/30 transition-all duration-300 hover:scale-105 hover:bg-white shadow-lg"
           >
             <Instagram className="w-5 h-5" />

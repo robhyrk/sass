@@ -1,32 +1,32 @@
 "use client"
 
 import { useRef } from "react"
-import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
+import { ChevronLeft, ChevronRight, Heart, MapPin } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Jessica M.",
-    text: "Literally the best decision I ever made! My skin has never looked better and the whole experience was so fun and welcoming.",
+    name: "Ci Mat",
+    text: "Sas is an exceptional aesthetician! I'm in love with her work. I'll never stop going to see her and appreciate that she offers mobile services now! Her personality matched with her professionalism makes my visits well worthwhile.",
     rating: 5,
   },
   {
-    name: "Sarah K.",
-    text: "Finally found someone who gets it! Professional service with personality. The laser sessions were quick and actually enjoyable.",
+    name: "Lillian T.",
+    text: "Sass is such an amazing Aesthetician! She is so thorough, informative, professional and kind. Intimate services like laser and facials usually make me nervous, but I was at such ease with her. Her services are worth every penny and more!",
     rating: 5,
   },
   {
-    name: "Ashley T.",
-    text: "The vibe here is immaculate. I always leave feeling like a whole new person. 10/10 recommend to everyone!",
+    name: "GP",
+    text: "I went to the Sassy Aesthetician in mid July and my skin is still so happy with the \"ultimate\" facial I got. The aesthetician was really knowledgeable and walked me through the benefits of each product and the treatment.",
     rating: 5,
   },
   {
-    name: "Morgan R.",
-    text: "I was nervous about microneedling but she made me feel so comfortable. Amazing results and zero awkwardness!",
+    name: "Milandeep B.",
+    text: "She's so knowledgeable and good at what she does. I haven't even been seeing her 6 months and my skin is so smooth from laser and the ingrowns are nearly gone! I would recommend her to anyone.",
     rating: 5,
   },
   {
-    name: "Taylor B.",
-    text: "This place is everything. Great energy, amazing results, and I actually look forward to my appointments now!",
+    name: "Bri",
+    text: "I was nervous to get laser but the sassy aesthetician is so knowledgeable, thorough and transparent. The space is cute and I felt comfortable from the moment she greeted me. Can't wait for my next session!",
     rating: 5,
   },
 ]
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
             The Hype Is Real
           </h2>
           <p className="font-body text-lg text-sassy-charcoal/70 max-w-2xl mx-auto">
-            Don&apos;t just take my word for it — hear it from the girlies.
+            Do not just take my word for it — hear it from the girlies.
           </p>
         </div>
 
@@ -108,6 +108,19 @@ export function TestimonialsSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Google Reviews Link */}
+        <div className="text-center mt-10">
+          <a
+            href="https://maps.app.goo.gl/HgubqyFtrVTHAcbf9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-sassy-charcoal bg-white/70 backdrop-blur-sm border border-white/50 soft-shadow transition-all duration-300 hover:scale-105 hover:bg-white"
+          >
+            <MapPin className="w-5 h-5 text-sassy-pink" />
+            See all reviews on Google
+          </a>
         </div>
       </div>
     </section>

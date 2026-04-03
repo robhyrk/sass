@@ -44,21 +44,21 @@ export function AboutSection() {
             
             <div className="space-y-4 font-body text-lg text-sassy-charcoal/80 leading-relaxed">
               <p>
-                Hey, I&apos;m Sass. I do skincare that&apos;s actually fun — no sterile spa silence, no judgment, no boring small talk about the weather.
+                Hey, I am Sass. I do skincare that is actually fun — no sterile spa silence, no judgment, no boring small talk about the weather.
               </p>
               <p>
-                I&apos;ve spent years perfecting my craft so you don&apos;t have to guess what works. I&apos;ll tell you straight up what your skin needs, get you glowing, and keep the energy good the whole time.
+                I have spent years perfecting my craft so you do not have to guess what works. I will tell you straight up what your skin needs, get you glowing, and keep the energy good the whole time.
               </p>
               <p>
-                Whether you&apos;re done with shaving forever, need a skin reset, or just want to feel like that girl — I got you.
+                Whether you are done with shaving forever, need a skin reset, or just want to feel like that girl — I got you.
               </p>
             </div>
 
             {/* Fun stats */}
-            <div className="mt-8 grid grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { number: "5+", label: "Years Experience" },
-                { number: "1000+", label: "Happy Clients" },
+                // { number: "100+", label: "Happy Clients" },
                 { number: "100%", label: "Sass Guaranteed" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center p-4 rounded-2xl bg-white/50 backdrop-blur-sm">
