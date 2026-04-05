@@ -5,7 +5,7 @@ import { FloatingElements } from "./floating-elements"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative z-0 min-h-screen flex items-center justify-center overflow-clip">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -21,7 +21,7 @@ export function HeroSection() {
         >
           <source src="/hero/video-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-sassy-pink/20" />
       </div>
 
       {/* Floating Elements */}
@@ -73,14 +73,14 @@ export function HeroSection() {
           </div>
 
           {/* Subheadline */}
-          <p className="mt-6 lg:mt-8 text-base md:text-lg lg:text-xl font-body text-sassy-charcoal/80 max-w-md text-center text-balance">
+          <p className="mt-6 lg:mt-8 font-body text-sassy-charcoal/90 max-w-[50ch] text-center text-balance leading-relaxed" style={{ fontSize: 'var(--text-body-lg)' }}>
             Your fave aesthetician with the cutest vibe. I do laser, skin, and glow-ups — boring spa energy need not apply.
           </p>
 
           {/* CTA Button */}
           <a
             href="#booking"
-            className="mt-6 lg:mt-8 inline-flex items-center px-8 py-4 rounded-full font-display font-bold text-lg text-sassy-charcoal bg-gradient-to-r from-sassy-pink via-sassy-lavender to-sassy-mint transition-transform duration-300 hover:scale-105 glow-pink shadow-lg"
+            className="mt-6 lg:mt-8 inline-flex items-center px-8 py-4 rounded-full font-display font-bold text-sassy-charcoal bg-gradient-to-r from-sassy-pink via-sassy-lavender to-sassy-mint transition-transform duration-300 hover:scale-105 glow-pink shadow-lg uppercase tracking-wide" style={{ fontSize: 'var(--text-body-lg)' }}
           >
             Book Your Glow-Up
           </a>

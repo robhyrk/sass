@@ -45,14 +45,14 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section id="reviews" className="relative py-20 md:py-32 bg-gradient-to-b from-sassy-pink/10 to-sassy-lavender/20">
+    <section id="reviews" className="relative z-0 py-36 md:py-48 bg-gradient-to-b from-sassy-pink/10 to-sassy-lavender/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-sassy-charcoal mb-4">
+          <h2 className="font-display font-bold text-sassy-heading mb-4" style={{ fontSize: 'var(--text-section)', lineHeight: 1.15 }}>
             The Hype Is Real
           </h2>
-          <p className="font-body text-lg text-sassy-charcoal/70 max-w-2xl mx-auto">
+          <p className="font-body font-medium text-sassy-charcoal/85 max-w-[55ch] mx-auto leading-relaxed" style={{ fontSize: 'var(--text-body-lg)' }}>
             Do not just take my word for it — hear it from the girlies.
           </p>
         </div>
@@ -97,12 +97,12 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <p className="font-body text-sassy-charcoal/80 leading-relaxed mb-4">
+                <p className="font-body font-medium text-sassy-charcoal/90 leading-relaxed mb-4" style={{ fontSize: 'var(--text-body)' }}>
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
 
                 {/* Name */}
-                <p className="font-display font-semibold text-sassy-charcoal">
+                <p className="font-display font-semibold text-sassy-charcoal" style={{ fontSize: 'var(--text-body)' }}>
                   {testimonial.name}
                 </p>
               </div>
@@ -116,9 +116,9 @@ export function TestimonialsSection() {
             href="https://maps.app.goo.gl/HgubqyFtrVTHAcbf9"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-sassy-charcoal bg-white/70 backdrop-blur-sm border border-white/50 soft-shadow transition-all duration-300 hover:scale-105 hover:bg-white"
+            className="btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-bold tracking-wide uppercase text-sassy-charcoal transition-all duration-300 hover:scale-105 glow-pink shadow-lg"
           >
-            <MapPin className="w-5 h-5 text-sassy-pink" />
+            <MapPin className="w-5 h-5" />
             See all reviews on Google
           </a>
         </div>

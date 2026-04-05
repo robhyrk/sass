@@ -26,14 +26,14 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative py-20 md:py-32 bg-gradient-to-b from-white/50 to-sassy-lavender/20 overflow-visible">
+    <section id="services" className="relative z-0 py-36 md:py-48 bg-gradient-to-b from-sassy-pink/15 to-sassy-lavender/20 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-sassy-charcoal mb-4">
+          <h2 className="font-display font-bold text-sassy-heading mb-4" style={{ fontSize: 'var(--text-section)', lineHeight: 1.15 }}>
             The Glow-Up Menu
           </h2>
-          <p className="font-body text-lg text-sassy-charcoal/70 max-w-2xl mx-auto text-balance">
+          <p className="font-body font-medium text-sassy-charcoal/85 max-w-[55ch] mx-auto text-balance leading-relaxed" style={{ fontSize: 'var(--text-body-lg)' }}>
             Three ways to level up your skin game. Pick your fighter.
           </p>
         </div>
@@ -52,10 +52,10 @@ export function ServicesSection() {
               </div>
 
               {/* Content */}
-              <h3 className="font-display text-2xl font-bold text-sassy-charcoal mb-3">
+              <h3 className="font-display font-bold text-sassy-heading mb-3" style={{ fontSize: 'var(--text-card)', lineHeight: 1.2 }}>
                 {service.title}
               </h3>
-              <p className="font-body text-sassy-charcoal/70 leading-relaxed">
+              <p className="font-body font-medium text-sassy-charcoal/85 leading-relaxed" style={{ fontSize: 'var(--text-body)' }}>
                 {service.description}
               </p>
 

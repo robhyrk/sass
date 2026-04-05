@@ -32,7 +32,7 @@ export function Footer() {
       </div>
 
       {/* Chibi Peeking from Bottom */}
-      <div className="absolute bottom-0 left-8 lg:left-16 chibi-hover">
+      <div className="absolute bottom-0 left-4 sm:left-8 lg:left-16 chibi-hover hidden sm:block">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sass-ccfILkBwcZMv5rR63BIDSsG6aSTLTx.png"
           alt="Sassy character waving goodbye"
@@ -43,51 +43,52 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Logo */}
-          <div className="text-center md:text-left md:pl-20 lg:pl-28">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+          {/* Logo + tagline */}
+          <div className="flex flex-col items-center gap-1 md:flex-row md:items-baseline md:gap-3">
             <Link href="/" className="inline-block">
-              <span className="font-display text-2xl font-bold text-sassy-charcoal">
+              <span className="font-display font-bold text-sassy-charcoal" style={{ fontSize: 'var(--text-card)' }}>
                 The Sassy Aesthetician
               </span>
             </Link>
-            <p className="font-body text-sm text-sassy-charcoal/70 mt-2">
+            <span className="hidden md:inline text-sassy-charcoal/30">|</span>
+            <p className="font-body text-sassy-charcoal/85 text-center" style={{ fontSize: 'var(--text-sm)' }}>
               Cute vibes. Real results. Always sassy.
             </p>
           </div>
 
-          {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-4">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-body text-sm text-sassy-charcoal/80 hover:text-sassy-charcoal transition-colors hover:underline decoration-sassy-pink decoration-2 underline-offset-4"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Social Links */}
-          <div className="flex justify-center md:justify-end gap-3">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-white/50 backdrop-blur-sm flex items-center justify-center text-sassy-charcoal/70 hover:bg-gradient-to-r hover:from-sassy-pink hover:to-sassy-lavender hover:text-sassy-charcoal transition-all duration-300 shadow-sm hover:shadow-md hover:scale-110"
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
+          {/* Nav + Social */}
+          <div className="flex flex-col items-center gap-5 md:flex-row md:gap-8">
+            <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-5">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="font-body text-sassy-charcoal/90 hover:text-sassy-charcoal transition-colors hover:underline decoration-sassy-pink decoration-2 underline-offset-4" style={{ fontSize: 'var(--text-sm)' }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex items-center gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full bg-white/50 backdrop-blur-sm flex items-center justify-center text-sassy-charcoal/70 hover:bg-gradient-to-r hover:from-sassy-pink hover:to-sassy-lavender hover:text-sassy-charcoal transition-all duration-300 shadow-sm hover:shadow-md hover:scale-110"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-sassy-charcoal/10 mt-8 pt-8">
-          <p className="font-body text-sm text-sassy-charcoal/50 text-center">
+        {/* Copyright */}
+        <div className="border-t border-sassy-charcoal/10 mt-6 pt-6">
+          <p className="font-body text-sassy-charcoal/65 text-center text-balance" style={{ fontSize: 'var(--text-sm)' }}>
             {new Date().getFullYear()} The Sassy Aesthetician. All rights reserved. Stay sassy.
           </p>
         </div>

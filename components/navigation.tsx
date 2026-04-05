@@ -62,7 +62,7 @@ export function Navigation() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 rounded-full text-sm font-semibold text-sassy-charcoal transition-all duration-300 hover:bg-gradient-to-r hover:from-sassy-pink/60 hover:to-sassy-lavender/60 hover:text-sassy-charcoal hover:shadow-md"
+                className="px-4 py-2 rounded-full text-sm font-semibold tracking-wide text-sassy-heading transition-all duration-300 hover:bg-white/30 hover:shadow-md"
               >
                 {item.label}
               </Link>
@@ -72,7 +72,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-full bg-white/30 backdrop-blur-sm"
+            className="md:hidden p-2 rounded-full bg-white/60 backdrop-blur-sm shadow-md"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -85,14 +85,14 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-br from-sassy-pink/60 via-sassy-lavender/60 to-sassy-mint/60 backdrop-blur-md shadow-lg border-t border-white/30 animate-holographic bg-[length:400%_400%]">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-br from-sassy-pink/90 via-sassy-lavender/90 to-sassy-mint/90 backdrop-blur-lg shadow-lg border-t border-white/30 animate-holographic bg-[length:400%_400%]">
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-3 rounded-2xl text-sm font-semibold text-sassy-charcoal text-center transition-all duration-300 hover:bg-gradient-to-r hover:from-sassy-pink/60 hover:to-sassy-lavender/60 hover:text-sassy-charcoal hover:shadow-md"
+                  className="block px-4 py-3 rounded-2xl text-sm font-semibold tracking-wide text-sassy-heading text-center transition-all duration-300 hover:bg-white/30 hover:shadow-md"
                 >
                   {item.label}
                 </Link>

@@ -38,6 +38,8 @@
   --sassy-cyan: oklch(0.8 0.1 200);
   --sassy-green: oklch(0.7 0.15 145);
   --sassy-charcoal: oklch(0.3 0.02 280);
+  --sassy-pearl: oklch(0.98 0.015 310);
+  --sassy-heading: oklch(0.38 0.12 290);
 }
 
 @theme inline {
@@ -81,6 +83,8 @@
   --color-sassy-cyan: var(--sassy-cyan);
   --color-sassy-green: var(--sassy-green);
   --color-sassy-charcoal: var(--sassy-charcoal);
+  --color-sassy-pearl: var(--sassy-pearl);
+  --color-sassy-heading: var(--sassy-heading);
 }
 
 @layer base {
@@ -89,7 +93,20 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
   }
+}
+
+/* Type scale — fluid headings, fixed body */
+:root {
+  --text-hero: clamp(2.5rem, 5vw + 1.5rem, 4.5rem);
+  --text-section: clamp(2.25rem, 4vw + 1rem, 3.75rem);
+  --text-card: clamp(1.375rem, 1.5vw + 0.75rem, 1.75rem);
+  --text-body-lg: 1.1875rem;
+  --text-body: 1.0625rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
 }
 
 /* Holographic gradient animation */
@@ -203,4 +220,31 @@
 .chibi-hover:hover > img,
 .chibi-hover:hover > * > img {
   animation: wiggle 0.6s ease-in-out;
+}
+
+/* Secondary button — same shape, softer gradient */
+.btn-secondary {
+  background: linear-gradient(to right,
+    oklch(0.92 0.06 330),
+    oklch(0.9 0.06 290),
+    oklch(0.92 0.06 160)
+  );
+}
+
+/* Cloud divider drift — three layers at different speeds */
+@keyframes cloud-drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-3000px); }
+}
+
+.animate-cloud-back {
+  animation: cloud-drift 200s linear infinite;
+}
+
+.animate-cloud-mid {
+  animation: cloud-drift 150s linear infinite;
+}
+
+.animate-cloud-front {
+  animation: cloud-drift 110s linear infinite;
 }

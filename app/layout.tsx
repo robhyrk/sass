@@ -3,16 +3,16 @@ import { Baloo_2, Quicksand } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const baloo = Baloo_2({ 
+const baloo = Baloo_2({
   subsets: ["latin"],
   variable: '--font-display',
-  weight: ['400', '500', '600', '700', '800']
+  weight: ['400', '600', '700']
 });
 
-const quicksand = Quicksand({ 
+const quicksand = Quicksand({
   subsets: ["latin"],
   variable: '--font-body',
-  weight: ['400', '500', '600', '700']
+  weight: ['400', '500', '600']
 });
 
 export const metadata: Metadata = {

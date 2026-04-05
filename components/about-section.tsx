@@ -5,7 +5,7 @@ import { FloatingElements } from "./floating-elements"
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-20 md:py-32 bg-gradient-to-b from-sassy-lavender/20 via-sassy-mint/10 to-sassy-pink/10 overflow-hidden">
+    <section id="about" className="relative z-0 py-36 md:py-48 bg-gradient-to-b from-sassy-lavender/20 via-sassy-mint/10 to-sassy-pink/10 overflow-hidden">
       {/* Floating Elements */}
       <FloatingElements variant="about" />
 
@@ -38,11 +38,11 @@ export function AboutSection() {
 
           {/* Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-sassy-charcoal mb-6">
+            <h2 className="font-display font-bold text-sassy-heading mb-6" style={{ fontSize: 'var(--text-section)', lineHeight: 1.15 }}>
               Meet The Aesthetician
             </h2>
-            
-            <div className="space-y-4 font-body text-lg text-sassy-charcoal/80 leading-relaxed">
+
+            <div className="space-y-4 font-body font-medium text-sassy-charcoal/90 leading-relaxed max-w-[60ch]" style={{ fontSize: 'var(--text-body-lg)' }}>
               <p>
                 Hey, I am Sass. I do skincare that is actually fun — no sterile spa silence, no judgment, no boring small talk about the weather.
               </p>
@@ -62,10 +62,10 @@ export function AboutSection() {
                 { number: "100%", label: "Sass Guaranteed" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center p-4 rounded-2xl bg-white/50 backdrop-blur-sm">
-                  <div className="font-display text-2xl md:text-3xl font-bold bg-gradient-to-r from-sassy-pink to-sassy-lavender bg-clip-text text-transparent">
+                  <div className="font-display font-bold bg-gradient-to-r from-sassy-pink to-sassy-lavender bg-clip-text text-transparent" style={{ fontSize: 'var(--text-card)', lineHeight: 1.2 }}>
                     {stat.number}
                   </div>
-                  <div className="font-body text-sm text-sassy-charcoal/60 mt-1">
+                  <div className="font-body text-sassy-charcoal/75 mt-1" style={{ fontSize: 'var(--text-sm)' }}>
                     {stat.label}
                   </div>
                 </div>
